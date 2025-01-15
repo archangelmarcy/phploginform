@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 5.4.3, created on 2025-01-08 14:14:04
+/* Smarty version 5.4.3, created on 2025-01-15 20:59:45
   from 'file:header.tpl' */
 
 /* @var \Smarty\Template $_smarty_tpl */
 if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   'version' => '5.4.3',
-  'unifunc' => 'content_677e7a1c156d50_47838362',
+  'unifunc' => 'content_678813b10e5113_99084072',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '0fd83573e923c1619c4eeb80a37693ecdda60cab' => 
     array (
       0 => 'header.tpl',
-      1 => 1736342017,
+      1 => 1736971179,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
   array (
   ),
 ))) {
-function content_677e7a1c156d50_47838362 (\Smarty\Template $_smarty_tpl) {
+function content_678813b10e5113_99084072 (\Smarty\Template $_smarty_tpl) {
 $_smarty_current_dir = 'C:\\xampp\\htdocs\\phpLoginForm\\templates';
 ?><!DOCTYPE html>
 <html lang="pl">

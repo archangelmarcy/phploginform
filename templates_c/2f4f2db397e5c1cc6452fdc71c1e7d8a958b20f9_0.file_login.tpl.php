@@ -1,18 +1,32 @@
-<!DOCTYPE html>
-<html lang="pl">
+<?php
+/* Smarty version 5.4.3, created on 2025-01-15 21:02:09
+  from 'file:login.tpl' */
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logowanie</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-        crossorigin="anonymous">
-</head>
-
-<body>
-    <?php if (!isset($_POST['submit'])): ?>
+/* @var \Smarty\Template $_smarty_tpl */
+if ($_smarty_tpl->getCompiled()->isFresh($_smarty_tpl, array (
+  'version' => '5.4.3',
+  'unifunc' => 'content_67881441eec718_38150705',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '2f4f2db397e5c1cc6452fdc71c1e7d8a958b20f9' => 
+    array (
+      0 => 'login.tpl',
+      1 => 1736971217,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+    'file:header.tpl' => 1,
+    'file:footer.tpl' => 1,
+  ),
+))) {
+function content_67881441eec718_38150705 (\Smarty\Template $_smarty_tpl) {
+$_smarty_current_dir = 'C:\\xampp\\htdocs\\phpLoginForm\\templates';
+$_smarty_tpl->renderSubTemplate("file:header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+?>
+    <?php if (!$_smarty_tpl->getValue('formSubmitted')) {?>
         <!-- pokaż tą część jeśli nie wysłaliśmy formularza -->
         <div class="container">
             <div class="col-8 col-lg-4 offset-2 offset-lg-4 text-center pt-3">
@@ -29,18 +43,11 @@
                 </form>
             </div>
         </div>
-    <?php else: ?>
+    <?php } else { ?>
         <!-- pokaż tą część jeśli wysłaliśmy formularz -->
-        <?php
-        $email = $_POST['emailInput'];
-        $password = $_POST['passwordInput'];
-        $user = new User($email, $password);
-        $user->registerSession();
-        ?>
         <h1>Zalogowano poprawnie</h1>
         <a href="/phploginform">Powrót do głównej strony</a>
-    <?php endif; ?>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-</body>
-
-</html>
+    <?php }
+$_smarty_tpl->renderSubTemplate("file:footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), (int) 0, $_smarty_current_dir);
+}
+}
