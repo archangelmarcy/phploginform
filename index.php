@@ -4,6 +4,7 @@ ini_set('display_errors', 1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 require_once('class/User.php');
+require_once('class/upload.php');
 
 session_start(); 
 use Steampixel\Route;
@@ -129,6 +130,17 @@ Route::add('/logout', function() {
     }
     $s->display('logout.tpl');
 });
+
+Route::add('/upload', function(){
+    global $s;
+    $s->display('upload.tpl');
+});
+
+
+//formularz do wgrywania obrazka
+Route::add('/upload', function() {
+    new Upload($_FILES['file']);
+}, 'post');
 
 Route::run('/phploginform');
 ?>
