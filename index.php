@@ -4,7 +4,9 @@ ini_set('display_errors', 1);
 
 require_once __DIR__ . '/vendor/autoload.php';
 require_once('class/User.php');
-require_once('class/upload.php');
+require_once('class/image.php');
+
+
 
 session_start(); 
 use Steampixel\Route;
@@ -139,7 +141,7 @@ Route::add('/upload', function(){
 
 //formularz do wgrywania obrazka
 Route::add('/upload', function() {
-    new Upload($_FILES['file']);
+    Image::Upload($_FILES['file']);
 }, 'post');
 
 Route::run('/phploginform');
